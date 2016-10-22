@@ -24,7 +24,8 @@ var states = [
 
         { name: 'svcprolanding', state: { url: '/svcprolanding', parent: 'svcpro', templateUrl: 'views/landings/serviceprovider.html', data: {text: "Case Manager3", visible: true } } },
 
-        { name: 'logout', state: { url: '/login', data: {text: "Logout", visible: true }} }
+        { name: 'logout', state: { url: '/login', data: {text: "Logout", visible: true }} },
+        { name: 'question', state: { url: '/questionnaire', parent: 'dashboard', templateUrl: 'views/questions/question.html', controller: 'QuestionsCtrl', data: {text: "Questions", visible: true } } }
     ];
 
 var app = angular.module('yapp', ['ui.router','snap', 'ngAnimate']);
