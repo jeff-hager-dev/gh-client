@@ -20,10 +20,16 @@ var states = [
         { name: 'overview', state: { url: '/overview', parent: 'dashboard', templateUrl: 'views/dashboard/overview.html', data: {text: "Overview", visible: true } } },
         { name: 'reports', state: { url: '/reports', parent: 'dashboard', templateUrl: 'views/dashboard/reports.html', data: {text: "Reports", visible: true } } },
 
-
         { name: 'cmgrlanding', state: { url: '/cmgrlanding', parent: 'cmgr', templateUrl: 'views/landings/casemanager.html', data: {text: "Home", visible: true } } },
         { name: 'svcprolanding', state: { url: '/svcprolanding', parent: 'svcpro', templateUrl: 'views/landings/serviceprovider.html', data: {text: "Home", visible: true } } },
         { name: 'clientlanding', state: { url: '/clientlanding', parent: 'client', templateUrl: 'views/landings/client.html', data: {text: "Home", visible: true } } },
+
+
+
+        { name: 'clientprofile', state: { url: '/profile', parent: 'client', templateUrl: 'views/client/profile.html', data: {text: "Profile", visible: true } } },
+        { name: 'clientresources', state: { url: '/resources', parent: 'client', templateUrl: 'views/client/resources.html', data: {text: "Resources", visible: true } } },
+        { name: 'clientcalendar', state: { url: '/calendar', parent: 'client', templateUrl: 'views/client/calendar.html', data: {text: "Calendar", visible: true } } },
+        { name: 'clientdocuments', state: { url: '/documents', parent: 'client', templateUrl: 'views/client/documents.html', data: {text: "Documents", visible: true } } },
 
         { name: 'logout', state: { url: '/login', data: {text: "Logout", visible: true }} }
     ];
