@@ -3371,6 +3371,7 @@ textarea.form-group-lg .form-control,select[multiple].form-group-lg .form-contro
 
 .btn-primary:hover,.btn-primary:focus,.btn-primary.focus,.btn-primary:active,.btn-primary.active,.open>.dropdown-toggle.btn-primary {
     color: #fff;
+    background-color: #148f77;
     border-color: #0f705d
 }
 
@@ -7233,6 +7234,7 @@ button.close {
 .btn-white:hover,.btn-white:focus {
     border-color: #fff;
     color: #797979;
+    background: #fff
 }
 
 .snap-content,snap-content {
