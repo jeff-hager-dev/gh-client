@@ -40,6 +40,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.when('/cmgr', '/cmgr/cmgrlanding');
     $urlRouterProvider.when('/svcpro', '/svcpro/svcprolanding');
     $urlRouterProvider.when('/client', '/client/clientlanding');
+
     $urlRouterProvider.otherwise('/dashboard');
 
 
