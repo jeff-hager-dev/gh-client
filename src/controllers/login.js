@@ -7,14 +7,44 @@
  * # MainCtrl
  * Controller of yapp
  */
-angular.module('yapp')
-  .controller('LoginCtrl', function($scope, $location) {
+var login = angular.module('yapp');
+login.controller('LoginCtrl', function($scope, $location) {
+
+        $scope.submit = function() {
+
+        $location.path('/dashboard');
+
+        return false;
+    }
+
+});
+login.controller('ClientLoginCtrl', function($scope, $location) {
 
     $scope.submit = function() {
 
-      $location.path('/dashboard');
+        $location.path('/client/clientlanding');
 
-      return false;
+        return false;
     }
 
-  });
+});
+login.controller('CaseManagerLoginCtrl', function($scope, $location) {
+
+    $scope.submit = function() {
+
+        $location.path('/cmgr/cmgrlanding');
+
+        return false;
+    }
+
+});
+login.controller('ServiceProviderLoginCtrl', function($scope, $location) {
+
+    $scope.submit = function() {
+
+        $location.path('/svcpro/svcprolanding');
+
+        return false;
+    }
+
+});
