@@ -17,9 +17,10 @@ app.use('/', express.static(__dirname + '/'));
 
 // viewed at http://localhost:8080
 app.get('/', function(req, res) {
+    console.log('responding to request');
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 
-app.listen(8080);
+app.listen(8081);
 

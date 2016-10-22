@@ -16,7 +16,7 @@ var states = [
 
         { name: 'overview', state: { url: '/overview', parent: 'dashboard', templateUrl: 'views/dashboard/overview.html', data: {text: "Overview", visible: true } } },
         { name: 'reports', state: { url: '/reports', parent: 'dashboard', templateUrl: 'views/dashboard/reports.html', data: {text: "Reports", visible: true } } },
-        { name: 'managerlanding', state: { url: '/landing', parent: 'casemanager', templateUrl: 'views/landings/casemanager.html', data: {text: "Case Manager1", visible: true } } },
+        { name: 'managerlanding', state: { url: '/managerlanding', parent: 'casemanager', templateUrl: 'views/landings/casemanager.html', data: {text: "Case Manager1", visible: true } } },
 
         { name: 'logout', state: { url: '/login', data: {text: "Logout", visible: true }} }
     ];
@@ -24,7 +24,7 @@ var states = [
 var app = angular.module('yapp', ['ui.router','snap', 'ngAnimate']);
 app.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.when('/dashboard', '/dashboard/overview');
-    //$urlRouterProvider.when('/casemanager', '/casemanager/managerlanding');
+    $urlRouterProvider.when('/casemanager', '/casemanager/managerlanding');
     $urlRouterProvider.otherwise('/login');
 
 
