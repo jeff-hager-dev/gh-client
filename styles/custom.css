@@ -1,3 +1,26 @@
 .svcbox {
   min-width: 100%;
 }
+
+.login-page {
+  background: #1a97bc;
+}
+
+.login-page .user-avatar {
+    height: 222px;
+}
+
+.login-page:before {
+    border-right: solid 120px #1a97bc;
+}
+
+.login-page .form-content .login {
+    background: #ff4444;
+    border-color: #ff4444;
+}
+
+.login-page .form-content .form-control {
+    background: transparent;
+    border-color: transparent;
+    border-bottom: 1px solid #000;
+}
