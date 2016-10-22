@@ -11,7 +11,7 @@ app.use('/styles', express.static(__dirname + '/styles/'));
 app.use('/src', express.static(__dirname + '/src/'));
 app.use('/views', express.static(__dirname + '/views/'));
 app.use('/images', express.static(__dirname + '/images/'));
-
+app.use('/fonts', express.static(__dirname + '/fonts/'));
 app.use('/', express.static(__dirname + '/'));
 
 
