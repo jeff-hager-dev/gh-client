@@ -25,11 +25,12 @@ var states = [
         { name: 'clientlanding', state: { url: '/clientlanding', parent: 'client', templateUrl: 'views/landings/client.html', data: {text: "Home", visible: true } } },
 
 
-
         { name: 'clientprofile', state: { url: '/profile', parent: 'client', templateUrl: 'views/client/profile.html', data: {text: "Profile", visible: true } } },
         { name: 'clientresources', state: { url: '/resources', parent: 'client', templateUrl: 'views/client/resources.html', data: {text: "Resources", visible: true } } },
         { name: 'clientcalendar', state: { url: '/calendar', parent: 'client', templateUrl: 'views/client/calendar.html', data: {text: "Calendar", visible: true } } },
         { name: 'clientdocuments', state: { url: '/documents', parent: 'client', templateUrl: 'views/client/documents.html', data: {text: "Documents", visible: true } } },
+
+
 
         { name: 'logout', state: { url: '/login', data: {text: "Logout", visible: true }} }
     ];
