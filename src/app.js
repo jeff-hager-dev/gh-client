@@ -14,20 +14,18 @@ var states = [
         { name: 'dashboard', state: { url: '/dashboard', parent: 'base', templateUrl: 'views/dashboard.html', controller: 'DashboardCtrl', data: {text: "Dashboard", visible: false } } },
         { name: 'overview', state: { url: '/overview', parent: 'dashboard', templateUrl: 'views/dashboard/overview.html', data: {text: "Overview", visible: true } } },
         { name: 'reports', state: { url: '/reports', parent: 'dashboard', templateUrl: 'views/dashboard/reports.html', data: {text: "Reports", visible: true } } },
+        { name: 'casemanager', state: { url: '/casemanager', parent: 'dashboard', templateUrl: 'views/landings/casemanager.html', data: {text: "Reports", visible: true } } },
         { name: 'logout', state: { url: '/login', data: {text: "Logout", visible: true }} }
+
     ];
 
-angular.module('yapp', [
-                'ui.router',
-                'snap',
-                'ngAnimate'
-            ])
-        .config(function($stateProvider, $urlRouterProvider) {
-            $urlRouterProvider.when('/dashboard', '/dashboard/overview');
-            //$urlRouterProvider.otherwise('/login');
-            $urlRouterProvider.otherwise('/dashboard/overview');
+var app = angular.module('yapp', ['ui.router','snap', 'ngAnimate']);
+app.config(function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.when('/dashboard', '/dashboard/overview');
+    $urlRouterProvider.otherwise('/login');
 
-            angular.forEach(states, function (state) {
-                $stateProvider.state(state.name, state.state);
-            });
-        });
+
+    angular.forEach(states, function (state) {
+        $stateProvider.state(state.name, state.state);
+    });
+});
