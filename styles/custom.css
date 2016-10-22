@@ -1,0 +1,8 @@
+.svcbox {
+  min-width: 250px;
+}
+
+.svcbox a:hover {
+  color: #757575;
+  text-decoration: none;
+}
