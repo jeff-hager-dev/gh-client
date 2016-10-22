@@ -14,7 +14,7 @@ var states = [
         { name: 'dashboard', state: { url: '/dashboard', parent: 'base', templateUrl: 'views/dashboard.html', controller: 'DashboardCtrl', data: {text: "Dashboard", visible: false } } },
 
         { name: 'cmgr', state: { url: '/cmgr', parent: 'base', templateUrl: 'views/landings/casemanager.html', controller: 'CaseManagerCtrl', data: {text: "Case Manager", visible: false } } },
-        { name: 'svcpro', state: { url: '/svcpro', parent: 'base', templateUrl: 'views/landings/casemanager.html', controller: 'CaseManagerCtrl', data: {text: "Case Manager", visible: false } } },
+        { name: 'svcpro', state: { url: '/svcpro', parent: 'base', templateUrl: 'views/landings/serviceprovider.html', controller: 'CaseManagerCtrl', data: {text: "Case Manager", visible: false } } },
 
         { name: 'overview', state: { url: '/overview', parent: 'dashboard', templateUrl: 'views/dashboard/overview.html', data: {text: "Overview", visible: true } } },
         { name: 'reports', state: { url: '/reports', parent: 'dashboard', templateUrl: 'views/dashboard/reports.html', data: {text: "Reports", visible: true } } },
