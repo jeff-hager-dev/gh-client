@@ -2,6 +2,16 @@
   min-width: 100%;
 }
 
+.front-page-help {
+  position: relative;
+  bottom: 100px;
+}
+
+.front-page-buttons {
+  position:relative;
+  bottom: 200px;
+}
+
 .login-page {
   background: #1a97bc;
 }
@@ -24,3 +34,40 @@
     border-color: transparent;
     border-bottom: 1px solid #000;
 }
+
+.snap-drawer {
+    background: #555;
+}
+
+.client-profile {
+}
+
+.client-profile-image > img{
+  width: 250px;
+  float: left;
+  margin-top: 40px;
+}
+.client-profile > .user-contact-name{
+   margin: 0 auto;
+   font-size: 100px;
+   width: 500px;
+ }
+
+.client-profile > .user-contact-ssn{
+  margin: 0 auto;
+  font-size: 25px;
+  width: 500px;
+}
+
+.client-profile > .user-contact-phone{
+  margin: 0 auto;
+  font-size: 25px;
+  width: 500px;
+}
+
+.client-profile > .user-contact-address{
+  margin: 0 auto;
+  font-size: 25px;
+  width: 500px;
+}
+

@@ -1,3 +1,18 @@
+<style>
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 30px 30px 30px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+
 <div>
     <div ng-include="'menus/clientmenu.html'"></div>
     <snap-dragger></snap-dragger>
@@ -10,16 +25,17 @@
         </a>
 
         <div class="fr">
-            <h2>Case Manager <small>Task</small></h2>
+            <h2>Client <small>Resources</small></h2>
         </div>
         <span class="glyphicon glyphicon-dashboard bg-fade"></span>
         <div class="jumbotron">
             <div class="container">
-                <h2>Add new client</h2>
-                <p>What is the client's name?</p>
-                <input class="form-control"></input><br /><br />
+                <h1>Resources</h1>
+                <button class="button" ng-click="showHousingPanel = !showHousingPanel">Housing</button>
+                <button class="button">test</button>
+                <br/>
                 <p>
-                    <a class="btn btn-primary btn-lg btn-white" ui-sref="overview">Next</a>
+                    <a class="btn btn-primary btn-lg btn-white" ui-sref="overview">Back to Overview</a>
                 </p>
             </div>
         </div>

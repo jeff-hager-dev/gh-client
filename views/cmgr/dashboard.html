@@ -10,17 +10,46 @@
         </a>
 
         <div class="fr">
-            <h2>Case Manager <small>Dashboard</small></h2>
+            <h2>Case Manager <small style="color:white;">Dashboard</small></h2>
         </div>
-        <span class="glyphicon glyphicon-dashboard bg-fade"></span>
-        <div class="jumbotron">
-            <div class="container">
-                <h1>Dashboard</h1>
-                <p>Dashboard page</p>
-                <p>
-                    <a class="btn btn-primary btn-lg btn-white" ui-sref="overview">Back to Overview</a>
-                </p>
+        <!--<span class="glyphicon glyphicon-dashboard bg-fade"></span>-->
+
+        <div class="container">
+            <div class="row" style="height:200px;">
+                <div class="col-x2-3"></div>
+                <div class="col-x2-6">
+                    <canvas id="bar" class="chart chart-bar" chart-data="newClientData" chart-labels="newClientLabels" chart-series="newClientSeries" height="100px" chart-options="newClientOptions"></canvas>
+                </div>
+                <div class="col-x2-3"></div>
             </div>
+            <div class="row" style="height:200px;margin-top:250px;">
+                <div class="col-x2-3"></div>
+                <div class="col-x2-6" style="text-align:center;font-family:Helvetica Neue;font-size:larger;">
+
+                        <strong>Percentage of Services Required </strong><br/>
+                        <canvas id="pie" class="chart chart-pie" chart-data="servicesData" chart-labels="servicesLabels" chart-options="servicesSeries" height="100px" chart-options="servicesOptions"></canvas>
+
+                </div>
+                <div class="col-x2-3"></div>
+            </div>
+            <div class="row" style="height:200px;margin-top:250px;">
+                <div class="col-x2-3"></div>
+                <div class="col-x2-6" style="text-align:center;font-family:Helvetica Neue;font-size:larger;">
+
+
+                    <canvas id="line" class="chart chart-line" chart-data="accuityData" chart-labels="accuityLabels" chart-series="accuitySeries" chart-options="accuityOptions"></canvas>
+                </div>
+                <div class="col-x2-3"></div>
+            </div>
+
+
+
         </div>
+
+
+
+
     </snap-content>
+
+
 </div>

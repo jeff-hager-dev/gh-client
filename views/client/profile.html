@@ -15,11 +15,26 @@
         <span class="glyphicon glyphicon-dashboard bg-fade"></span>
         <div class="jumbotron">
             <div class="container">
-                <h1>Profile</h1>
-                <p>Profile page</p>
-                <p>
-                    <a class="btn btn-primary btn-lg btn-white" ui-sref="overview">Back to Overview</a>
-                </p>
+                <div class="client-profile-image">
+                    <img src="../images/the-user.png" class="user-avatar img-circle img-responsive">
+                </div>
+                <div class="client-profile">
+
+                    <div class="user-contact-name">
+                        <span ng-bind="ClientModel.firstName"></span>&nbsp;<span ng-bind="ClientModel.lastName"></span>
+                    </div>
+                    <div class="user-contact-ssn">
+                        <label>SSN:</label> <span ng-bind="ClientModel.ssn"></span>
+                    </div>
+                    <div class="user-contact-phone">
+                        <label>Phone:</label> <span ng-bind="ClientModel.contact.phone"></span>
+                    </div>
+                    <div class="user-contact-address">
+                        <label>Address:</label>
+                        <div ng-bind="ClientModel.contact.address"></div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </snap-content>

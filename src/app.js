@@ -26,13 +26,15 @@ var states = [
         { name: 'reports', state: { url: '/reports', parent: 'dashboard', templateUrl: 'views/dashboard/reports.html', data: {text: "Reports", visible: true } } },
 
 
-        { name: 'cmgrlanding', state: { url: '/cmgrlanding', parent: 'cmgr', templateUrl: 'views/cmgr/landing.html', data: {text: "cmgrLanding", visible: false } } },
+        //{ name: 'cmgrlanding', state: { url: '/cmgrlanding', parent: 'cmgr', templateUrl: 'views/cmgr/landing.html', data: {text: "cmgrLanding", visible: false } } },
+        { name: 'cmgrlanding', state: { url: '/cmgrlanding', parent: 'cmgr', templateUrl: 'views/cmgr/dashboard.html', data: {text: "cmgrLanding", visible: false } } },
         { name: 'svcprolanding', state: { url: '/svcprolanding', parent: 'svcpro', templateUrl: 'views/svcpro/landing.html', data: {text: "svcproLanding", visible: false } } },
         { name: 'clientlanding', state: { url: '/clientlanding', parent: 'client', templateUrl: 'views/client/landing.html', data: {text: "clientLanding", visible: false } } },
 
 
-        { name: 'clientprofile', state: { url: '/profile', parent: 'client', templateUrl: 'views/client/profile.html', data: {text: "Profile", visible: true } } },
-        { name: 'clientresources', state: { url: '/resources', parent: 'client', templateUrl: 'views/client/resources.html', data: {text: "Resources", visible: true } } },
+        { name: 'clientprofile', state: { url: '/profile', parent: 'client', templateUrl: 'views/client/profile.html', controller: 'ClientProfileCtrl', data: {text: "Profile", visible: true } } },
+        { name: 'clientresources', state: { url: '/resources', parent: 'client', templateUrl: 'views/client/resources.html', controller: 'ClientResourcesCtrl', data: {text: "Resources", visible: true } } },
+        { name: 'clientresourceshousing', state: { url: '/resources/housing', parent: 'client', templateUrl: 'views/client/resourceshousing.html', controller: 'ClientResourcesCtrl', data: {text: "Resources", visible: true } } },
         { name: 'clientcalendar', state: { url: '/calendar', parent: 'client', templateUrl: 'views/client/calendar.html', data: {text: "Calendar", visible: true } } },
         { name: 'clientdocuments', state: { url: '/documents', parent: 'client', templateUrl: 'views/client/documents.html', data: {text: "Documents", visible: true } } },
 
@@ -44,7 +46,7 @@ var states = [
 
         { name: 'cmgrintake', state: { url: '/intake', parent: 'cmgr', templateUrl: 'views/cmgr/intake.html', data: {text: "Intake", visible: true } } },
         { name: 'cmgrresources', state: { url: '/dashboard', parent: 'cmgr', templateUrl: 'views/cmgr/dashboard.html', data: {text: "Dashboard", visible: true } } },
-        { name: 'cmgrcalendar', state: { url: '/resources', parent: 'cmgr', templateUrl: 'views/cmgr/resources.html', data: {text: "Resources", visible: true } } },
+        { name: 'cmgrcalendar', state: { url: '/resources', parent: 'cmgr', templateUrl: 'views/cmgr/resources.html', controller: "CmgrResourceCtrl", data: {text: "Resources", visible: true } } },
         { name: 'cmgrdocuments', state: { url: '/filemgr', parent: 'cmgr', templateUrl: 'views/cmgr/filemgr.html', data: {text: "File Manager", visible: true } } },
 
 
@@ -52,14 +54,14 @@ var states = [
         { name: 'question', state: { url: '/questionnaire', parent: 'dashboard', templateUrl: 'views/questions/question.html', controller: 'QuestionsCtrl', data: {text: "Questions", visible: true } } }
     ];
 
-var app = angular.module('yapp', ['ui.router','snap', 'ngAnimate']);
+var app = angular.module('yapp', ['ui.router','snap', 'ngAnimate', 'chart.js']);
 app.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.when('/dashboard', '/dashboard/overview');
     //$urlRouterProvider.when('/cmgr', '/cmgr/cmgrlanding');
     //$urlRouterProvider.when('/svcpro', '/svcpro/svcprolanding');
     //$urlRouterProvider.when('/client', '/client/clientlogin');
-
-    $urlRouterProvider.otherwise('/dashboard');
+    $urlRouterProvider.when('', '/dashboard');
+    //$urlRouterProvider.otherwise('/dashboard');
 
 
     angular.forEach(states, function (state) {
