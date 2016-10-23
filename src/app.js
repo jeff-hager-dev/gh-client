@@ -26,7 +26,8 @@ var states = [
         { name: 'reports', state: { url: '/reports', parent: 'dashboard', templateUrl: 'views/dashboard/reports.html', data: {text: "Reports", visible: true } } },
 
 
-        { name: 'cmgrlanding', state: { url: '/cmgrlanding', parent: 'cmgr', templateUrl: 'views/cmgr/landing.html', data: {text: "cmgrLanding", visible: false } } },
+        //{ name: 'cmgrlanding', state: { url: '/cmgrlanding', parent: 'cmgr', templateUrl: 'views/cmgr/landing.html', data: {text: "cmgrLanding", visible: false } } },
+        { name: 'cmgrlanding', state: { url: '/cmgrlanding', parent: 'cmgr', templateUrl: 'views/cmgr/dashboard.html', data: {text: "cmgrLanding", visible: false } } },
         { name: 'svcprolanding', state: { url: '/svcprolanding', parent: 'svcpro', templateUrl: 'views/svcpro/landing.html', data: {text: "svcproLanding", visible: false } } },
         { name: 'clientlanding', state: { url: '/clientlanding', parent: 'client', templateUrl: 'views/client/landing.html', data: {text: "clientLanding", visible: false } } },
 

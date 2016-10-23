@@ -55,6 +55,18 @@ app.controller('CaseManagerCtrl', function($scope, $state) {
     $scope.newClientData = [
         [18, 17, 11, 13, 15, 17, 23]
     ];
+
+    $scope.servicesSeries = ['Month','asdsad','asdasd'];
+    $scope.servicesLabels = ["Housing", "Health Services", "Employment Services", "Food", "Transportation"];
+    $scope.servicesData = [300, 500, 100, 50, 200];
+
+    $scope.servicesOptions = {
+        title: {
+            display: true,
+            text: 'Percentage of Services Required'
+        }
+    };
+
 });
 
 app.controller('ServiceProviderCtrl', function($scope, $state) {
