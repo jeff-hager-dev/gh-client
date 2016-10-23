@@ -22,7 +22,7 @@ login.controller('ClientLoginCtrl', function($scope, $location) {
 
     $scope.submit = function() {
 
-        $location.path('/client/clientlanding');
+        $location.path('/client/profile');
 
         return false;
     }
