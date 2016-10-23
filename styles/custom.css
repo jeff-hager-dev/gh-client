@@ -38,3 +38,18 @@
 .snap-drawer {
     background: #555;
 }
+
+.client-profile {
+}
+
+.client-profile > img{
+  width: 250px;
+  margin: 0 auto;
+}
+.client-profile > .user-name{
+  margin: 0 auto;
+  font-size: 100px;
+
+  width: 500px;
+}
+
