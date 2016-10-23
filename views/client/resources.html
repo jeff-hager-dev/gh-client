@@ -1,3 +1,18 @@
+<style>
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 30px 30px 30px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+
 <div>
     <div ng-include="'menus/clientmenu.html'"></div>
     <snap-dragger></snap-dragger>
@@ -16,7 +31,16 @@
         <div class="jumbotron">
             <div class="container">
                 <h1>Resources</h1>
-                <p>Resources page</p>
+                <button class="button">Housing</button>
+                <button class="button">Financial</button>
+                <button class="button">Health</button>
+                <button class="button">Food</button>
+                <button class="button">Transportation</button>
+                <button class="button">Employment</button>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
                 <p>
                     <a class="btn btn-primary btn-lg btn-white" ui-sref="overview">Back to Overview</a>
                 </p>
