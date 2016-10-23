@@ -47,7 +47,7 @@ var states = [
         { name: 'cmgrintake', state: { url: '/intake', parent: 'cmgr', templateUrl: 'views/cmgr/intake.html', controller: 'QuestionsCtrl', data: {text: "Intake", visible: true } } },
         { name: 'cmgrresources', state: { url: '/dashboard', parent: 'cmgr', templateUrl: 'views/cmgr/dashboard.html', data: {text: "Dashboard", visible: true } } },
         { name: 'cmgrcalendar', state: { url: '/resources', parent: 'cmgr', templateUrl: 'views/cmgr/resources.html', controller: "CmgrResourceCtrl", data: {text: "Resources", visible: true } } },
-        { name: 'cmgrdocuments', state: { url: '/filemgr', parent: 'cmgr', templateUrl: 'views/cmgr/filemgr.html', data: {text: "File Manager", visible: true } } },
+        //{ name: 'cmgrdocuments', state: { url: '/filemgr', parent: 'cmgr', templateUrl: 'views/cmgr/filemgr.html', data: {text: "File Manager", visible: true } } },
 
 
         { name: 'logout', state: { url: '/login', data: {text: "Logout", visible: true }} }
