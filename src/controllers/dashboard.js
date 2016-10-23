@@ -115,8 +115,8 @@ app.controller('ClientCtrl', function($scope, $state) {
     });
 
 });
-<<<<<<< HEAD
-app.controller('QuestionsCtrl', function($scope){
+
+app.controller('QuestionsCtrl', function($scope) {
     var questionIndex = 0;
     var questionList = [
         "Have you been attacked or beaten up since becoming homeless?",
@@ -124,18 +124,18 @@ app.controller('QuestionsCtrl', function($scope){
 
     ]
     questionSwitch();
-    $scope.clickAnswer = function(answer){
+    $scope.clickAnswer = function (answer) {
         questionIndex++;
         questionSwitch();
     };
-    $scope.clickBack = function(){
+    $scope.clickBack = function () {
         questionIndex--;
         questionSwitch();
     }
-    function questionSwitch(){
+    function questionSwitch() {
         $scope.text = questionList[questionIndex];
     }
-=======
+});
 
 app.controller('ClientResourcesCtrl', function($scope, $state) {
     $scope.$state = $state;
@@ -200,5 +200,4 @@ app.controller('CmgrResourceCtrl', function($scope) {
     description: "Sunshine Ministries provides emergency services for men in need of immediate assistance in a caring and accepting environment. Food, shelter and other basic needs are provided for each man. A simple hot meal could be their first step to a new life!",
     resources: 5,
     lastUpdated: "10/08/2016 4:55pm"}];
->>>>>>> origin/master
 });
