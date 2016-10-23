@@ -2,6 +2,11 @@
   min-width: 100%;
 }
 
+.front-page-buttons {
+  position:relative;
+  bottom: 50px;
+}
+
 .login-page {
   background: #1a97bc;
 }
