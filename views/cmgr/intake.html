@@ -22,20 +22,28 @@
                 <input ng-model="client.firstName" placeholder="First Name" class="form-control"></input><br/><br/>
                 <input ng-model="client.lastName" placeholder="Last Name" class="form-control"></input><br/><br/>
                 <input ng-model="client.ssn" placeholder="Social Security #" class="form-control"></input><br/><br/>
+                <input ng-model="client.contactInfo.phone" placeholder="Phone #" class="form-control"></input><br/><br/>
+                <input ng-model="client.contactInfo.address" placeholder="Address" class="form-control"></input><br/><br/>
                 <br/>
-                <p>{{text}}</p>
-                <div class="container">
-                    <div class="col-md-4"><a ng-click="clickAnswer('yes')"
-                                             class="btn btn-primary btn-lg btn-white svcbox">Yes</a></div>
-                    <div class="col-md-4"><a ng-click="clickAnswer('no')"
-                                             class="btn btn-primary btn-lg btn-white svcbox">No</a>
-                    </div>
-                    <div class="col-md-4"><a ng-click="clickAnswer('na')"
-                                             class="btn btn-primary btn-lg btn-white svcbox">No Answer</a>
+                <div ng-show="areMoreQuestions()">
+                    <h2>Domain 3 - Socialization and Daily Functions</h2>
+                    <p>{{text}}</p>
+                    <div class="container">
+                        <div class="col-md-4"><a ng-click="clickAnswer('yes')"
+                                                 class="btn btn-primary btn-lg btn-white svcbox">Yes</a></div>
+                        <div class="col-md-4"><a ng-click="clickAnswer('no')"
+                                                 class="btn btn-primary btn-lg btn-white svcbox">No</a>
+                        </div>
+                        <div class="col-md-4"><a ng-click="clickAnswer('na')"
+                                                 class="btn btn-primary btn-lg btn-white svcbox">No Answer</a>
+                        </div>
                     </div>
                 </div>
                 </br>
-                <div class="container">
+                <div ng-show="!areMoreQuestions()">
+                    <p>Complete</p>
+                </div>
+                <div class="container" ng-show="!isStart()">
                     <div class="col-md-4"><a ng-click="clickBack()"
                                              class="btn btn-primary btn-lg btn-white svcbox">Back</a></div>
                 </div>
