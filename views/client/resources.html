@@ -31,13 +31,17 @@
         <div class="jumbotron">
             <div class="container">
                 <h1>Resources</h1>
-                <button class="button">Housing</button>
+                <button class="button" ng-click="showHousingPanel = !showHousingPanel">Housing</button>
                 <button class="button">Financial</button>
                 <button class="button">Health</button>
                 <button class="button">Food</button>
                 <button class="button">Transportation</button>
                 <button class="button">Employment</button>
                 <br/>
+                <div name="housingpanel" ng-show="showHousingPanel">
+                    <button class="button">Housing Assistance</button>
+                    <button class="button">Shelter</button>
+                </div>
                 <br/>
                 <br/>
                 <br/>

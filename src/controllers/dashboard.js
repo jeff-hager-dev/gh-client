@@ -115,3 +115,14 @@ app.controller('ClientCtrl', function($scope, $state) {
     });
 
 });
+
+app.controller('ClientResourcesCtrl', function($scope, $state) {
+    $scope.$state = $state;
+
+    $scope.menuItems = [];
+
+   $scope.showHousingPanel = true;
+
+});
+
+

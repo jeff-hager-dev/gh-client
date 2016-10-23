@@ -33,7 +33,7 @@ var states = [
 
 
         { name: 'clientprofile', state: { url: '/profile', parent: 'client', templateUrl: 'views/client/profile.html', data: {text: "Profile", visible: true } } },
-        { name: 'clientresources', state: { url: '/resources', parent: 'client', templateUrl: 'views/client/resources.html', data: {text: "Resources", visible: true } } },
+        { name: 'clientresources', state: { url: '/resources', parent: 'client', templateUrl: 'views/client/resources.html', controller: 'ClientResourcesCtrl', data: {text: "Resources", visible: true } } },
         { name: 'clientcalendar', state: { url: '/calendar', parent: 'client', templateUrl: 'views/client/calendar.html', data: {text: "Calendar", visible: true } } },
         { name: 'clientdocuments', state: { url: '/documents', parent: 'client', templateUrl: 'views/client/documents.html', data: {text: "Documents", visible: true } } },
 
