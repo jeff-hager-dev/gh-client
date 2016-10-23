@@ -4,38 +4,47 @@
     <snap-content snap-opt-tap-to-close="false" class="bg-dark">
         <a href="" snap-toggle="left" ng-click="menuOpen = !menuOpen">
 			<span class="menutoggle">
-				<i ng-hide="menuOpen" class="fa fa-bars fa-2x" ></i>
-				<i ng-show="menuOpen" class="fa fa-times fa-2x" ></i>
+				<i ng-hide="menuOpen" class="fa fa-bars fa-2x"></i>
+				<i ng-show="menuOpen" class="fa fa-times fa-2x"></i>
 			</span>
         </a>
 
         <div class="fr">
-            <h2>Case Manager <small>Task</small></h2>
+            <h2>Case Manager
+                <small>Task</small>
+            </h2>
         </div>
         <span class="glyphicon glyphicon-dashboard bg-fade"></span>
         <div class="jumbotron">
             <div class="container">
                 <h2>Add new client</h2>
                 <p>What is the client's name?</p>
-                <input class="form-control"></input><br /><br />
-                <p>
-                    <a class="btn btn-primary btn-lg btn-white" ui-sref="overview">Next</a>
-                </p>
-            </div>
-        </div>
-        <div>
-            <div class="container">
-                {{text}}
-            </div>
-            <div class="container">
-                <div class="col-md-4"><a ng-click="clickAnswer('yes')" class="btn btn-primary btn-lg btn-white svcbox">Yes</a></div>
-                <div class="col-md-4"><a ng-click="clickAnswer('no')" class="btn btn-primary btn-lg btn-white svcbox">No</a>
+                <input ng-model="client.firstName" placeholder="First Name" class="form-control"></input><br/><br/>
+                <input ng-model="client.lastName" placeholder="Last Name" class="form-control"></input><br/><br/>
+                <input ng-model="client.ssn" placeholder="Social Security #" class="form-control"></input><br/><br/>
+                <br/>
+                <p>{{text}}</p>
+                <div class="container">
+                    <div class="col-md-4"><a ng-click="clickAnswer('yes')"
+                                             class="btn btn-primary btn-lg btn-white svcbox">Yes</a></div>
+                    <div class="col-md-4"><a ng-click="clickAnswer('no')"
+                                             class="btn btn-primary btn-lg btn-white svcbox">No</a>
+                    </div>
+                    <div class="col-md-4"><a ng-click="clickAnswer('na')"
+                                             class="btn btn-primary btn-lg btn-white svcbox">No Answer</a>
+                    </div>
                 </div>
-                <div class="col-md-4"><a ng-click="clickAnswer('na')" class="btn btn-primary btn-lg btn-white svcbox">No Answer</a>
+                </br>
+                <div class="container">
+                    <div class="col-md-4"><a ng-click="clickBack()"
+                                             class="btn btn-primary btn-lg btn-white svcbox">Back</a></div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="col-md-4"><a ng-click="clickBack()" class="btn btn-primary btn-lg btn-white svcbox">Back</a></div>
+                </br></br>
+                <div class="container row">
+                    <p>
+                        <a class="btn btn-primary btn-lg btn-white" ng-click="clickSubmit()">Submit</a>
+                    </p>
+                </div>
             </div>
         </div>
     </snap-content>
