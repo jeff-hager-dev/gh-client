@@ -33,7 +33,7 @@ app.controller('CaseManagerCtrl', function($scope, $state) {
 
     Chart.defaults.global.animation.duration = 2000;
     Chart.defaults.global.defaultFontColor = "#FFF";
-
+    Chart.defaults.global.title.fontSize = 16;
 
     $scope.newClientLabels = ['April', 'May', 'June', 'July', 'August', 'September', 'October'];
     $scope.newClientSeries = ['Month'];
