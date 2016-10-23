@@ -29,3 +29,7 @@
     border-color: transparent;
     border-bottom: 1px solid #000;
 }
+
+.snap-drawer {
+    background: #555;
+}
