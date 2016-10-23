@@ -121,8 +121,9 @@ app.controller('QuestionsCtrl', function($scope) {
     var questionList = [
         "Have you been attacked or beaten up since becoming homeless?",
         "Have you threatened to or tried to harm yourself or anyone else in the last year?"
-
     ]
+
+    $scope.client = {};
     questionSwitch();
     $scope.clickAnswer = function (answer) {
         questionIndex++;
@@ -131,7 +132,10 @@ app.controller('QuestionsCtrl', function($scope) {
     $scope.clickBack = function () {
         questionIndex--;
         questionSwitch();
-    }
+    };
+    $scope.clickSubmit = function(){
+
+    };
     function questionSwitch() {
         $scope.text = questionList[questionIndex];
     }
