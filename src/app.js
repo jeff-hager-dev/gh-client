@@ -32,7 +32,7 @@ var states = [
         { name: 'clientlanding', state: { url: '/clientlanding', parent: 'client', templateUrl: 'views/client/landing.html', data: {text: "clientLanding", visible: false } } },
 
 
-        { name: 'clientprofile', state: { url: '/profile', parent: 'client', templateUrl: 'views/client/profile.html', data: {text: "Profile", visible: true } } },
+        { name: 'clientprofile', state: { url: '/profile', parent: 'client', templateUrl: 'views/client/profile.html', controller: 'ClientProfileCtrl', data: {text: "Profile", visible: true } } },
         { name: 'clientresources', state: { url: '/resources', parent: 'client', templateUrl: 'views/client/resources.html', data: {text: "Resources", visible: true } } },
         { name: 'clientcalendar', state: { url: '/calendar', parent: 'client', templateUrl: 'views/client/calendar.html', data: {text: "Calendar", visible: true } } },
         { name: 'clientdocuments', state: { url: '/documents', parent: 'client', templateUrl: 'views/client/documents.html', data: {text: "Documents", visible: true } } },
@@ -45,7 +45,7 @@ var states = [
 
         { name: 'cmgrintake', state: { url: '/intake', parent: 'cmgr', templateUrl: 'views/cmgr/intake.html', data: {text: "Intake", visible: true } } },
         { name: 'cmgrresources', state: { url: '/dashboard', parent: 'cmgr', templateUrl: 'views/cmgr/dashboard.html', data: {text: "Dashboard", visible: true } } },
-        { name: 'cmgrcalendar', state: { url: '/resources', parent: 'cmgr', templateUrl: 'views/cmgr/resources.html', data: {text: "Resources", visible: true } } },
+        { name: 'cmgrcalendar', state: { url: '/resources', parent: 'cmgr', templateUrl: 'views/cmgr/resources.html', controller: "CmgrResourceCtrl", data: {text: "Resources", visible: true } } },
         { name: 'cmgrdocuments', state: { url: '/filemgr', parent: 'cmgr', templateUrl: 'views/cmgr/filemgr.html', data: {text: "File Manager", visible: true } } },
 
 
@@ -60,7 +60,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     //$urlRouterProvider.when('/svcpro', '/svcpro/svcprolanding');
     //$urlRouterProvider.when('/client', '/client/clientlogin');
 
-    $urlRouterProvider.otherwise('/dashboard');
+    //$urlRouterProvider.otherwise('/dashboard');
 
 
     angular.forEach(states, function (state) {

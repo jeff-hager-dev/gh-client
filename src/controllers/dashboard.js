@@ -115,3 +115,59 @@ app.controller('ClientCtrl', function($scope, $state) {
     });
 
 });
+
+app.controller('CmgrResourceCtrl', function($scope) {
+    $scope.foodServices = [{title: "Crisis Food Centers",
+    address: "21 E. 6th Street, Alton IL 62002",
+    phone: "618-462-8201",
+    webAddress: "www.crisisfoodcenter.org",
+    email: "info@crisisfoodcenter.org",
+    description: "Crisis Food Center is focused on providing a high-quality supply of nutritious food to the individuals and families who come to us for help.",
+    resources: 12,
+    lastUpdated: "10/22/2016 8:42pm"},
+
+    {title: "Glen-Ed Pantry",
+    address: "125 5th Avenue, PO Box 756, Edwardsville IL, 62025",
+    phone: "618-656-7506",
+    webAddress: "www.glenedpantry.org/home",
+    email: "glenedpantry@sbcglobal.net",
+    description: "An ecumenical organization governed by representatives of 18 churches Services: Food, clothing, school supplies, rent and utility assistance.",
+    resources: 10,
+    lastUpdated: "10/21/2016 3:20pm"}];
+
+    $scope.housing = [{title: "Section 8 Vouchers",
+    address: "3520 Page Boulevard, St Louis, MO 63106",
+    phone: "314-286-4357",
+    webAddress: "none",
+    email: "none",
+    description: "Apply for Section 8 Housing Vouchers which allow for asistance in affording housing.",
+    resources: 0,
+    lastUpdated: "09/18/2016 8:10am"},
+
+    {title: "Franciscan Connection",
+    address: "2903 Cherokee Street, St. Louis, Missouri 63118",
+    phone: "314-773-8485",
+    webAddress: "www.franciscanconnection.org",
+    email: "franciscanconnection@theFriars.org",
+    description: "Get help and emergency assistance, all of which is offered to low-income St. Louis area individuals and families in times of need. Volunteers and full time staff can help families apply for grants, emergency rent fund, deposits, and much more.",
+    resources: 0,
+    lastUpdated: "10/01/2016 11:00am"}];
+
+    $scope.shelters = [{title: "Gateway 180",
+    address: "1000 N 19th Street, Saint Louis, MO 63106",
+    phone: "314-231-1515",
+    webAddress: "www.gateway180.org",
+    email: "info@gateway180.org",
+    description: "Gateway180 is a valuable resource for women, children and families experiencing homelessness. We provide safe, nurturing emergency shelter and offer supportive housing programs that empower adults and families to become independent and permanently housed.",
+    resources: 7,
+    lastUpdated: "10/22/2016 6:05am"},
+
+    {title: "Sunshine Mission",
+    address: "1520 N. 13th Street, St.Louis, MO 63106",
+    phone: "314-231-8209",
+    webAddress: "www.sunshineministries.org",
+    email: "website@sunshineministries.org",
+    description: "Sunshine Ministries provides emergency services for men in need of immediate assistance in a caring and accepting environment. Food, shelter and other basic needs are provided for each man. A simple hot meal could be their first step to a new life!",
+    resources: 5,
+    lastUpdated: "10/08/2016 4:55pm"}];
+});
