@@ -136,6 +136,7 @@ app.controller('QuestionsCtrl', function($scope, $http, $location) {
         questionSwitch();
     };
     $scope.clickSubmit = function(){
+        $scope.client.username = $scope.client.firstName;
         $http.post('http://localhost:3000/client',$scope.client)
             .then(function(response){
                 $location.path('/cmgr/cmgrlanding');
