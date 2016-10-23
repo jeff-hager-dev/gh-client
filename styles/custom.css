@@ -42,9 +42,10 @@
 .client-profile {
 }
 
-.client-profile > img{
+.client-profile-image > img{
   width: 250px;
-  margin: 0 auto;
+  float: left;
+  margin-top: 40px;
 }
 .client-profile > .user-contact-name{
    margin: 0 auto;
@@ -54,19 +55,19 @@
 
 .client-profile > .user-contact-ssn{
   margin: 0 auto;
-  font-size: 50px;
+  font-size: 25px;
   width: 500px;
 }
 
 .client-profile > .user-contact-phone{
   margin: 0 auto;
-  font-size: 50px;
+  font-size: 25px;
   width: 500px;
 }
 
 .client-profile > .user-contact-address{
   margin: 0 auto;
-  font-size: 50px;
+  font-size: 25px;
   width: 500px;
 }
 
