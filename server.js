@@ -3,6 +3,7 @@ var app = express();
 var path = require('path');
 const bodyParser = require('body-parser');
 var mongoUtil = require('./mongoUtil');
+var mongo = require('mongodb');
 
 app.use(express.static(__dirname + '/'));
 
@@ -24,8 +25,38 @@ app.get('/', function(req, res) {
 });
 
 app.get("/resource/:Type", function(req, res) {
-    mongoUtil.resources().find({ type: req.params.type },
-        {fields: {_id: 0}})
+    mongoUtil.resources().find({ type: req.params.type })
+        .toArray(function(err, docs){
+            var resources = docs.map(function(resource){
+                return resource;
+            });
+            res.send(resources);
+        });
+});
+
+app.put("/resource/id/:id", function(req, res) {
+    //req.body._id = mongo.ObjectId(req.body._id);
+    mongoUtil.resources().update({_id: mongo.ObjectId(req.params.id)}, req.body, function (err, result) {
+        if (err) {
+
+        }
+
+        res.status(200).json("updated success");
+        return;
+    });
+
+/*
+        .toArray(function(err, docs){
+            var resources = docs.map(function(resource){
+                return resource;
+            });
+            res.send(resources);
+        });
+        */
+});
+
+app.get("/resource/id/:id", function(req, res) {
+    mongoUtil.resources().find({_id : mongo.ObjectId(req.params.id)})
         .toArray(function(err, docs){
             var resources = docs.map(function(resource){
                 return resource;
