@@ -57,3 +57,23 @@ app.controller('ClientCtrl', function($scope, $state) {
     });
 
 });
+app.controller('QuestionsCtrl', function($scope){
+    var questionIndex = 0;
+    var questionList = [
+        "Have you been attacked or beaten up since becoming homeless?",
+        "Have you threatened to or tried to harm yourself or anyone else in the last year?"
+
+    ]
+    questionSwitch();
+    $scope.clickAnswer = function(answer){
+        questionIndex++;
+        questionSwitch();
+    };
+    $scope.clickBack = function(){
+        questionIndex--;
+        questionSwitch();
+    }
+    function questionSwitch(){
+        $scope.text = questionList[questionIndex];
+    }
+});
