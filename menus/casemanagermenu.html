@@ -1,12 +1,15 @@
 <snap-drawer>
     <div class=snap-menu>
         <div class="sidebar-header text-center">
-            <img src="../images/archlogo.jpg" class="sidebar-img img-circle" style="height:126px;">
+            <a href="../#/dashboard/overview"><img src="../images/archlogo.jpg" class="sidebar-img img-circle" style="height:126px;"></a>
         </div>
 
         <ul class=snap-ul>
             <li ng-repeat="item in menuItems" ng-class="{active: $state.includes('{{item.name}}') }">
                 <a ui-sref={{item.name}}>{{item.text}}</a>
+            </li>
+            <li>
+                <a href="../#/dashboard/overview">Log out</a>
             </li>
         </ul>
     </div>
