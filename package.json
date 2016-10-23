@@ -11,6 +11,7 @@
   "devDependencies": {
     "angular": "^1.5.8",
     "angular-animate": "^1.5.8",
+    "angular-chart.js": "^1.0.3",
     "angular-snap": "^1.8.5",
     "angular-ui-router": "^0.3.1",
     "babel-core": "^6.17.0",
