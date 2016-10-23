@@ -1,10 +1,12 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-
+const bodyParser = require('body-parser');
+var mongoUtil = require('./mongoUtil');
 
 app.use(express.static(__dirname + '/'));
 
+app.use(bodyParser.json());
 
 app.use('/modules', express.static(__dirname + '/node_modules/'));
 app.use('/styles', express.static(__dirname + '/styles/'));
@@ -14,12 +16,67 @@ app.use('/images', express.static(__dirname + '/images/'));
 app.use('/fonts', express.static(__dirname + '/fonts/'));
 app.use('/', express.static(__dirname + '/'));
 
+mongoUtil.connect();
 
-// viewed at http://localhost:8080
 app.get('/', function(req, res) {
     console.log('responding to request');
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
+app.get("/resource/:Type", function(req, res) {
+    mongoUtil.resources().find({ type: req.params.type },
+        {fields: {_id: 0}})
+        .toArray(function(err, docs){
+            var resources = docs.map(function(resource){
+                return resource;
+            });
+            res.send(resources);
+        });
+});
+
+app.get("/resource/:type/:subType", function(req, res) {
+    mongoUtil.resources()
+        .find({ type: req.params.type,
+                subTypes: req.params.subType },
+            {fields: {_id: 0}})
+        .toArray(function(err, docs){
+            var resources = docs.map(function(resource){
+                return resource;
+            });
+            res.send(resources);
+        });
+});
+
+app.get("/client", function(req, res){
+    mongoUtil.clients()
+        .find(searchObject(req.query), {fields: {_id: 0}})
+        .toArray(function (err, docs) {
+            var clients = docs.map(function(client){
+                return client;
+            });
+            res.send(clients);
+        });
+});
+
+app.post("/client", function (req, res) {
+    var client = req.body;
+    mongoUtil.clients()
+        .insertOne(client);
+    res.statusCode = 200;
+    res.send();
+});
 
 app.listen(8080);
+
+function GetRegex(val){
+    var value = (val == undefined ? '' : val);
+    return new RegExp(".*"+value +".*", 'i');
+}
+
+function searchObject(query){
+    return {
+        firstName: GetRegex(query.firstName),
+        lastName: GetRegex(query.lastName),
+        ssn: GetRegex(query.ssn),
+    }
+}
