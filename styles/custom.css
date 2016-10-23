@@ -46,10 +46,27 @@
   width: 250px;
   margin: 0 auto;
 }
-.client-profile > .user-name{
-  margin: 0 auto;
-  font-size: 100px;
+.client-profile > .user-contact-name{
+   margin: 0 auto;
+   font-size: 100px;
+   width: 500px;
+ }
 
+.client-profile > .user-contact-ssn{
+  margin: 0 auto;
+  font-size: 50px;
+  width: 500px;
+}
+
+.client-profile > .user-contact-phone{
+  margin: 0 auto;
+  font-size: 50px;
+  width: 500px;
+}
+
+.client-profile > .user-contact-address{
+  margin: 0 auto;
+  font-size: 50px;
   width: 500px;
 }
 

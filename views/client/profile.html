@@ -18,14 +18,24 @@
                 <div class="client-profile">
                     <img src="../images/the-user.png" class="user-avatar img-circle img-responsive">
 
-                    <div class="user-name">
+                    <div class="user-contact-name">
                         <span ng-bind="ClientModel.firstName"></span>&nbsp;<span ng-bind="ClientModel.lastName"></span>
                     </div>
-
-                    <p>
-                        <a class="btn btn-primary btn-lg btn-white" ui-sref="overview">Back to Overview</a>
-                    </p>
+                    <div class="user-contact-ssn">
+                        <label>SSN:</label> <span ng-bind="ClientModel.ssn"></span>
+                    </div>
+                    <div class="user-contact-phone">
+                        <label>Phone:</label> <span ng-bind="ClientModel.contact.phone"></span>
+                    </div>
+                    <div class="user-contact-address">
+                        <label>Address:</label>
+                        <div ng-bind="ClientModel.contact.address"></div>
+                    </div>
                 </div>
+
+                <p>
+                    <a class="btn btn-primary btn-lg btn-white" ui-sref="overview">Back to Overview</a>
+                </p>
             </div>
         </div>
     </snap-content>
