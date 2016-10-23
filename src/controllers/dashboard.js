@@ -121,7 +121,7 @@ app.controller('ClientResourcesCtrl', function($scope, $state) {
 
     $scope.menuItems = [];
 
-   $scope.showHousingPanel = true;
+   $scope.showHousingPanel = false;
 
 });
 
