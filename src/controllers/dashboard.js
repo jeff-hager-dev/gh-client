@@ -90,7 +90,7 @@ app.controller('CaseManagerCtrl', function($scope, $state) {
 
 });
 
-app.controller('ServiceProviderCtrl', function($scope, $state, $http) {
+app.controller('ServiceProviderCtrl', function($scope, $state, $http, $location) {
     $scope.$state = $state;
 
     $scope.menuItems = [];
@@ -101,6 +101,7 @@ app.controller('ServiceProviderCtrl', function($scope, $state, $http) {
         }
     });
 
+    /*
     $scope.svcprovider = function() {
       $http.get("http://localhost:8080/resource/id/580c3f4d4e04e3dfb0bca4ae/")
       .then(function(result) {
@@ -109,6 +110,18 @@ app.controller('ServiceProviderCtrl', function($scope, $state, $http) {
         return er;
       });
     }
+    */
+    var getResources = function () {
+        return $http.get('http://localhost:8080/resource/id/580c3f4d4e04e3dfb0bca4ae/').then(function (result) {
+            $scope.svcprovider = result.data;
+            return result;
+        },function(error) {
+            return error;
+        });
+    };
+    $scope.test = "this is a test";
+    getResources().data;
+
 
     // $scope.svcprovider = [{title: "Sunshine Mission",
     // address: "1520 N. 13th Street, St.Louis, MO 63106",
@@ -119,9 +132,22 @@ app.controller('ServiceProviderCtrl', function($scope, $state, $http) {
     // resources: 5,
     // lastUpdated: "10/08/2016 4:55pm"}];
 
-    // $scope.editResource = function() {
-    //   $http.post("http://localhost:8080/resource/", $scope)
-    // }
+
+    var updateResource = function () {
+        var temp = $scope.svcprovider[0];
+        delete temp._id;
+        return $http.put('http://localhost:8080/resource/id/580c3f4d4e04e3dfb0bca4ae/',temp).then(function (result) {
+            $location.path('/svcpro/svcprolanding');
+            return result;
+        },function(error) {
+            return error;
+        });
+    };
+
+
+     $scope.editResource = function() {
+         updateResource();
+     }
 });
 
 app.controller('ServiceProviderConCtrl', function($scope, $state, $http) {

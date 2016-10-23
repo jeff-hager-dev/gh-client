@@ -14,16 +14,17 @@
         </div>
         <div class="jumbotron">
           <div class="container">
+
             <div class="row" ng-repeat="s in svcprovider">
               <div class="col-md-12">
                 <fieldset style="background-color:#fff;color:#606060;padding:15px;">
-                  <h2 style="margin-top:5px;">{{s.title}}</h2>
-                  <p>{{s.address}}</p>
-                  Phone: <span>{{s.phone}}</span> <br />
-                  Web Address: <span>{{s.webAddress}}</span> <br />
-                  Email: <span>{{s.email}}</span> <br /><br />
-                  <span>{{s.description}} <br /><br />
-                  <span style="font-weight:bold;">Resources Available: <span style="font-size: 20px;color: #34795f;">{{s.resources}}</span></span>
+                  <h2 style="margin-top:5px;">{{s.Name}}</h2>
+                  <p>{{s.Address}}</p>
+                  Phone: <span>{{s.Phone}}</span> <br />
+                  Web Address: <span>{{s["Web Address"]}}</span> <br />
+                  Email: <span>{{s["Email Address"]}}</span> <br /><br />
+                  <span>{{s.Description}} <br /><br />
+                  <span style="font-weight:bold;">Resources Available: <span style="font-size: 20px;color: #34795f;">{{s["Resources Available"]}}</span></span>
                 </fieldset>
               </div>
             </div>

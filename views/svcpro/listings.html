@@ -17,17 +17,17 @@
               <div class="col-md-12">
                 <form ng-submit="editResource()">
                   <fieldset style="background-color:#fff;color:#606060;padding:15px;" ng-repeat="s in svcprovider">
-                    Company Name: <input class="form-control" style="margin-top:5px;" ng-model="s.title">
-                    Address: <input class="form-control" ng-model="s.address">
-                    Phone: <input class="form-control" ng-model="s.phone">
-                    Web Address: <input class="form-control" ng-model="s.webAddress">
-                    Email: <input class="form-control" ng-model="s.email"><br />
-                    Description: <textarea class="form-control" ng-model="s.description"></textarea><br />
-                    Resources Available: <input class="form-control" style="max-width:50px;display:inline-block;" type="number" name="quantity" ng-model="s.resources">
+                    Company Name: <input class="form-control" style="margin-top:5px;" ng-model="s.Name">
+                    Address: <input class="form-control" ng-model="s.Address">
+                    Phone: <input class="form-control" ng-model="s.Phone">
+                    Web Address: <input class="form-control" ng-model="s['Web Address']">
+                    Email: <input class="form-control" ng-model="s['Email Address']"><br />
+                    Description: <textarea class="form-control" ng-model="s.Description"></textarea><br />
+                    Resources Available: <input class="form-control" style="max-width:50px;display:inline-block;" type="number" name="quantity" ng-model="s['Resources Available']">
                   </fieldset>
                   <p style="margin-top:20px;float:right;">
                       <button type="submit" class="btn btn-primary btn-lg btn-white" href="#/svcpro/listings">Update</button>
-                      <a ui-sref="" class="btn btn-primary btn-lg btn-white" href="#/svcpro/listings">Cancel</a>
+                      <a ui-sref="svcprolanding" class="btn btn-primary btn-lg btn-white" >Cancel</a>
                   </p>
                 </form>
               </div>
