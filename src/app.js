@@ -52,7 +52,7 @@ var states = [
         { name: 'question', state: { url: '/questionnaire', parent: 'dashboard', templateUrl: 'views/questions/question.html', controller: 'QuestionsCtrl', data: {text: "Questions", visible: true } } }
     ];
 
-var app = angular.module('yapp', ['ui.router','snap', 'ngAnimate']);
+var app = angular.module('yapp', ['ui.router','snap', 'ngAnimate', 'chart.js']);
 app.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.when('/dashboard', '/dashboard/overview');
     //$urlRouterProvider.when('/cmgr', '/cmgr/cmgrlanding');
