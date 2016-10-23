@@ -15,8 +15,10 @@
         <span class="glyphicon glyphicon-dashboard bg-fade"></span>
         <div class="jumbotron">
             <div class="container">
-                <div class="client-profile">
+                <div class="client-profile-image">
                     <img src="../images/the-user.png" class="user-avatar img-circle img-responsive">
+                </div>
+                <div class="client-profile">
 
                     <div class="user-contact-name">
                         <span ng-bind="ClientModel.firstName"></span>&nbsp;<span ng-bind="ClientModel.lastName"></span>
@@ -33,9 +35,6 @@
                     </div>
                 </div>
 
-                <p>
-                    <a class="btn btn-primary btn-lg btn-white" ui-sref="overview">Back to Overview</a>
-                </p>
             </div>
         </div>
     </snap-content>
