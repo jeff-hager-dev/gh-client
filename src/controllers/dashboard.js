@@ -67,6 +67,27 @@ app.controller('CaseManagerCtrl', function($scope, $state) {
         }
     };
 
+    $scope.accuityLabels = ["January", "February", "March", "April", "May", "June", "July"];
+    $scope.accuitySeries = ['Series A'];
+    $scope.accuityData = [
+        [28, 48, 40, 19, 86, 27, 90],
+    ];
+
+
+    $scope.accuityOptions = {
+        title: {
+            display: true,
+            text: 'Accuity'
+        },
+        scales: {
+            xAxes: [
+                {
+                    gridLines: { show: true, color: 'white', }
+                }
+            ]
+        }
+    };
+
 });
 
 app.controller('ServiceProviderCtrl', function($scope, $state) {
