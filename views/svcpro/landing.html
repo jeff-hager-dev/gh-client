@@ -10,17 +10,36 @@
         </a>
 
         <div class="fr">
-            <h2>Service Provider</h2>
+            <h2>Service Provider <small style="color:white;">Dashboard</small></h2>
         </div>
-        <span class="glyphicon glyphicon-dashboard bg-fade"></span>
         <div class="jumbotron">
-            <div class="container">
-                <h1>Add Charts here</h1>
-                <p>You can use C3.js or Chart.js</p>
-                <p>
-                    <a class="btn btn-primary btn-lg btn-white" ui-sref="overview">Back to Overview</a>
-                </p>
+          <div class="container">
+            <div class="row" ng-repeat="s in svcprovider">
+              <div class="col-md-12">
+                <fieldset style="background-color:#fff;color:#606060;padding:15px;">
+                  <h2 style="margin-top:5px;">{{s.title}}</h2>
+                  <p>{{s.address}}</p>
+                  Phone: <span>{{s.phone}}</span> <br />
+                  Web Address: <span>{{s.webAddress}}</span> <br />
+                  Email: <span>{{s.email}}</span> <br /><br />
+                  <span>{{s.description}} <br /><br />
+                  <span style="font-weight:bold;">Resources Available: <span style="font-size: 20px;color: #34795f;">{{s.resources}}</span></span>
+                </fieldset>
+              </div>
             </div>
+            <p style="margin-top:20px;float:right;">
+                <a class="btn btn-primary btn-lg btn-white" href="#/svcpro/listings">Edit</a>
+            </p>
+              <!-- <div class="row" style="height:200px;">
+                <div class="col-mg-8" style="text-align:center;font-family:Helvetica Neue;font-size:larger;display:block;">
+                    <canvas id="line" class="chart chart-line" chart-data="accuityData" chart-labels="accuityLabels" chart-series="accuitySeries" chart-options="accuityOptions"></canvas>
+                </div>
+                <div class="col-mg-4" style="text-align:center;font-family:Helvetica Neue;font-size:larger;">
+                    <strong>Percentage of Services Required </strong><br/>
+                    <canvas id="pie" class="chart chart-pie" chart-data="servicesData" chart-labels="servicesLabels" chart-options="servicesSeries" height="100px" chart-options="servicesOptions"></canvas>
+                </div>
+              </div> -->
+          </div>
         </div>
     </snap-content>
 </div>

@@ -10,16 +10,28 @@
         </a>
 
         <div class="fr">
-            <h2>Service Provider <small>Listings</small></h2>
+            <h2>Service Provider <small>Edit</small></h2>
         </div>
-        <span class="glyphicon glyphicon-dashboard bg-fade"></span>
         <div class="jumbotron">
             <div class="container">
-                <h1>Listings</h1>
-                <p>Listings page</p>
-                <p>
-                    <a class="btn btn-primary btn-lg btn-white" ui-sref="overview">Back to Overview</a>
-                </p>
+              <div class="col-md-12">
+                <form ng-submit="editResource()">
+                  <fieldset style="background-color:#fff;color:#606060;padding:15px;" ng-repeat="s in svcprovider">
+                    Company Name: <input class="form-control" style="margin-top:5px;" ng-model="s.title">
+                    Address: <input class="form-control" ng-model="s.address">
+                    Phone: <input class="form-control" ng-model="s.phone">
+                    Web Address: <input class="form-control" ng-model="s.webAddress">
+                    Email: <input class="form-control" ng-model="s.email"><br />
+                    Description: <textarea class="form-control" ng-model="s.description"></textarea><br />
+                    Resources Available: <input class="form-control" style="max-width:50px;display:inline-block;" type="number" name="quantity" ng-model="s.resources">
+                  </fieldset>
+                  <p style="margin-top:20px;float:right;">
+                      <button type="submit" class="btn btn-primary btn-lg btn-white" href="#/svcpro/listings">Update</button>
+                      <a ui-sref="" class="btn btn-primary btn-lg btn-white" href="#/svcpro/listings">Cancel</a>
+                  </p>
+                </form>
+              </div>
+            </div>
             </div>
         </div>
     </snap-content>

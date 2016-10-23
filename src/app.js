@@ -39,9 +39,9 @@ var states = [
         { name: 'clientdocuments', state: { url: '/documents', parent: 'client', templateUrl: 'views/client/documents.html', data: {text: "Documents", visible: true } } },
 
 
-        { name: 'svcproresources', state: { url: '/resources', parent: 'svcpro', templateUrl: 'views/svcpro/resources.html', data: {text: "List Your Resources", visible: true } } },
-        { name: 'svcprocalendar', state: { url: '/listings', parent: 'svcpro', templateUrl: 'views/svcpro/listings.html', data: {text: "Manage Listings", visible: true } } },
-        { name: 'svcprodocuments', state: { url: '/connect', parent: 'svcpro', templateUrl: 'views/svcpro/connect.html', data: {text: "Connect", visible: true } } },
+        //{ name: 'svcproresources', state: { url: '/resources', parent: 'svcpro', templateUrl: 'views/svcpro/resources.html', data: {text: "List Your Resources", visible: true } } },
+        { name: 'svcprocalendar', state: { url: '/listings', parent: 'svcpro', templateUrl: 'views/svcpro/listings.html', data: {text: "Edit Your Listing", visible: true } } },
+        { name: 'svcprodocuments', state: { url: '/connect', parent: 'svcpro', templateUrl: 'views/svcpro/connect.html', data: {text: "Connect With Others", visible: true } } },
 
 
         { name: 'cmgrintake', state: { url: '/intake', parent: 'cmgr', templateUrl: 'views/cmgr/intake.html', controller: 'QuestionsCtrl', data: {text: "Intake", visible: true } } },
