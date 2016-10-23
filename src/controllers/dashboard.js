@@ -55,6 +55,39 @@ app.controller('CaseManagerCtrl', function($scope, $state) {
     $scope.newClientData = [
         [18, 17, 11, 13, 15, 17, 23]
     ];
+
+    $scope.servicesSeries = ['Month','asdsad','asdasd'];
+    $scope.servicesLabels = ["Housing", "Health Services", "Employment Services", "Food", "Transportation"];
+    $scope.servicesData = [300, 500, 100, 50, 200];
+
+    $scope.servicesOptions = {
+        title: {
+            display: true,
+            text: 'Percentage of Services Required'
+        }
+    };
+
+    $scope.accuityLabels = ["January", "February", "March", "April", "May", "June", "July"];
+    $scope.accuitySeries = ['Series A'];
+    $scope.accuityData = [
+        [28, 48, 40, 19, 86, 27, 90],
+    ];
+
+
+    $scope.accuityOptions = {
+        title: {
+            display: true,
+            text: 'Accuity'
+        },
+        scales: {
+            xAxes: [
+                {
+                    gridLines: { show: true, color: 'white', }
+                }
+            ]
+        }
+    };
+
 });
 
 app.controller('ServiceProviderCtrl', function($scope, $state) {
