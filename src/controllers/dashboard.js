@@ -116,14 +116,16 @@ app.controller('ClientCtrl', function($scope, $state) {
 
 });
 
-app.controller('QuestionsCtrl', function($scope) {
+app.controller('QuestionsCtrl', function($scope, $http, $location) {
     var questionIndex = 0;
     var questionList = [
-        "Have you been attacked or beaten up since becoming homeless?",
-        "Have you threatened to or tried to harm yourself or anyone else in the last year?"
+        "Is there anybody that thinks you owe them money?",
+        "Do you have enough money to meet all of your expenses on a monthly basis?",
+        "Do you have planned activities each day other than just surviving that bring you happiness and fulfillment?",
+        "Do you have any friends, family or other people in your life out of convenience or necessity, but you do not like their company?"
     ]
 
-    $scope.client = {};
+    $scope.client = { viScore: 10.2};
     questionSwitch();
     $scope.clickAnswer = function (answer) {
         questionIndex++;
@@ -134,11 +136,22 @@ app.controller('QuestionsCtrl', function($scope) {
         questionSwitch();
     };
     $scope.clickSubmit = function(){
+        $http.post('http://localhost:3000/client',$scope.client)
+            .then(function(response){
+                $location.path('/cmgr/cmgrlanding');
+            }, function(err){
 
+            });
     };
     function questionSwitch() {
         $scope.text = questionList[questionIndex];
-    }
+    };
+    $scope.areMoreQuestions = function() {
+        return questionList.length > questionIndex;
+    };
+    $scope.isStart = function(){
+        return questionIndex == 0;
+    };
 });
 
 app.controller('ClientResourcesCtrl', function($scope, $state) {
